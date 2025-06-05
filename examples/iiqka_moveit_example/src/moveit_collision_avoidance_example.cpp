@@ -42,8 +42,8 @@ int main(int argc, char * argv[])
 
   // Add collision object
   example_node->addCollisionBox(
-    geometry_msgs::build<geometry_msgs::msg::Vector3>().x(0.125).y(0.15).z(0.5),
-    geometry_msgs::build<geometry_msgs::msg::Vector3>().x(0.1).y(1.0).z(0.1));
+    geometry_msgs::build<geometry_msgs::msg::Vector3>().x(0.25).y(0.0).z(0.7),
+    geometry_msgs::build<geometry_msgs::msg::Vector3>().x(0.1).y(0.4).z(0.1));
   example_node->addBreakPoint();
 
   auto standing_pose =

@@ -62,7 +62,7 @@ int main(int argc, char * argv[])
 
   // Add collision object
   example_node->addCollisionBox(
-    geometry_msgs::build<geometry_msgs::msg::Vector3>().x(0.25).y(-0.075).z(0.675),
+    geometry_msgs::build<geometry_msgs::msg::Vector3>().x(0.25).y(0.0).z(0.7),
     geometry_msgs::build<geometry_msgs::msg::Vector3>().x(0.1).y(0.4).z(0.1));
   example_node->addBreakPoint();
 
