@@ -105,8 +105,21 @@ def launch_setup(context, *args, **kwargs):
             robot_description_kinematics,
         ],
     )
+    
+    static_tf_pub_1 = Node(
+        package="tf2_ros",
+        executable="static_transform_publisher",
+        arguments=["0", "0", "0.1", "0", "0", "0", "tool0", "/mechmind_camera/point_cloud"],
+    )
 
-    to_start = [startup_launch, move_group_server, rviz]
+    static_tf_pub_2 = Node(
+        package="tf2_ros",
+        executable="static_transform_publisher",
+        arguments=["0", "0", "0.1", "0", "0", "0", "tool0", "/mechmind_camera/textured_point_cloud"],
+    )
+
+
+    to_start = [startup_launch, move_group_server, rviz, static_tf_pub_1, static_tf_pub_2]
 
     return to_start
 
